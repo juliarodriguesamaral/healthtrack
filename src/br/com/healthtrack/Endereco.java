@@ -1,9 +1,25 @@
 package br.com.healthtrack;
 
+/**
+ * Classe que fornece o endereço para a classe Usuário
+ * @author julia
+ * @version 1.0
+ */
+
+
 public class Endereco {
 
+    /**
+     * Bairro onde o usuário reside
+     */
     private String bairro;
+    /**
+     * Cidade onde o usuário reside
+     */
     private String cidade;
+    /**
+     * Estado onde o usuário reside
+     */
     private String estado;
 
     public Endereco(String bairro, String cidade, String estado) {
@@ -33,6 +49,12 @@ public class Endereco {
                 '}';
     }
 
+    /**
+     * Atualiza os dados de residência do usuário
+     * @param bairro
+     * @param cidade
+     * @param estado
+     */
     public void atualizar(String bairro, String cidade, String estado){
         this.bairro = bairro;
         this.cidade = cidade;

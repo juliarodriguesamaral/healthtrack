@@ -1,14 +1,44 @@
 package br.com.healthtrack;
 
+/**
+ * Classe que representa o Usuário
+ * @author julia
+ * @version 1.0
+ */
+
 public class Usuario {
 
+    /**
+     * Nome do usuário
+     */
     private String nome;
+    /**
+     * Idade do usuário
+     */
     private int idade;
+    /**
+     * Altura do usuário
+     */
     private float altura;
+    /**
+     * Peso do usuário
+     */
     private float peso;
+    /**
+     * E-mail do usuário
+     */
     private String email;
+    /**
+     * Senha do usuário
+     */
     private String senha;
+    /**
+     * Endereço do usuário
+     */
     private Endereco endereco;
+    /**
+     * IMC do usuário
+     */
     private IMC imc;
 
     public Usuario(String nome, int idade, float altura, float peso, String email, String senha, Endereco endereco) {
@@ -65,6 +95,14 @@ public class Usuario {
                 '}';
     }
 
+    /**
+     * Atualiza dados do usuário
+     * @param email
+     * @param senha
+     * @param bairro
+     * @param cidade
+     * @param estado
+     */
     public void atualizarInformacoes(String email, String senha, String bairro, String cidade, String estado){
 
         this.email = email;
@@ -73,6 +111,11 @@ public class Usuario {
 
     }
 
+    /**
+     * Atualiza peso e altura do usuário
+     * @param peso
+     * @param altura
+     */
      public void atualizarPesoAltura(float peso, float altura) {
         this.peso = peso;
         this.altura= altura;
