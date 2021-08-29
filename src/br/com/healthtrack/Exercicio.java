@@ -54,15 +54,15 @@ public class Exercicio {
 		this.tipoExercicio = tipoExercicio;
 	}
 
-	public double calcularCalorias(double peso, double altura) {
+	public double calcularCaloriasPerdidas(Usuario usuario) {
 		if (this.tipoExercicio == TipoExercicio.CAMINHADA) {
-			return (8 * peso * 0.0175) * this.tempo;
+			return (8 * usuario.getPeso() * 0.0175) * this.tempo;
 		}else if (this.tipoExercicio == TipoExercicio.NATACAO){
-			return 8 * peso * this.tempo/60;
+			return 8 * usuario.getPeso() * this.tempo/60;
 		}else if (this.tipoExercicio == TipoExercicio.MUSCULACAO){
-			return 4.5 * peso * this.tempo/60;
+			return 4.5 * usuario.getPeso() * this.tempo/60;
 		}else if (this.tipoExercicio == TipoExercicio.CICLISMO){
-			return (8 * peso * 0.0175) * this.tempo;
+			return (8 * usuario.getPeso() * 0.0175) * this.tempo;
 		}
 		return this.caloriasPerdidas;
 	}
