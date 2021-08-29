@@ -1,5 +1,10 @@
 package br.com.healthtrack;
 
+/**
+ * @author Julia Amaral
+ * @author Matheus Nascimento
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {

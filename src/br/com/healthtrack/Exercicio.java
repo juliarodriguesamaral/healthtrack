@@ -1,11 +1,36 @@
 package br.com.healthtrack;
 
+/**
+ * 
+ * @author Matheus Nascimento
+ *
+ */
 public class Exercicio {
 	
+	/**
+	 * Nome do exercicio 
+	 */
 	private String nome;
+	
+	/**
+	 * Tempo do exercicio
+	 */
 	private double tempo;
+	
+	/**
+	 * Intensidade do exercicio
+	 */
 	private Intensidade intensidade;
+	
+	/**
+	 * Calorias perdidas no exercicio
+	 * caso não precise de calculo
+	 */
 	private double caloriasPerdidas;
+	
+	/**
+	 * Tipo do exercicio
+	 */
 	private TipoExercicio tipoExercicio;
 	
 	public Exercicio() {
@@ -54,6 +79,11 @@ public class Exercicio {
 		this.tipoExercicio = tipoExercicio;
 	}
 
+	/**
+	 * 
+	 * @param usuario
+	 * @return numero de calorias perdidas
+	 */
 	public double calcularCaloriasPerdidas(Usuario usuario) {
 		if (this.tipoExercicio == TipoExercicio.CAMINHADA) {
 			return (8 * usuario.getPeso() * 0.0175) * this.tempo;
